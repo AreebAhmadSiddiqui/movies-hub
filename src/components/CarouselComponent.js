@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import temData from './temData'
 
 function CarouselComponent({title,backdrop_path,poster_path,overview,release_date,vote_average,id,media_type}) {
     return (

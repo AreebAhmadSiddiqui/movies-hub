@@ -24,7 +24,9 @@ function DisplayPage() {
 
     // const url = 'http://localhost:5000/predict'
 
-    // const url = 'https://movie-recommender-api.azurewebsites.net/predict'
+    const url = 'https://movie-recommender-api.azurewebsites.net/predict'
+
+
     useEffect(() => {
 
         const fetchData = async () => {
@@ -46,7 +48,7 @@ function DisplayPage() {
         fetchVideo()
         
         const fetchPredData = async () => {
-            const res = await axios.post('https://movie-recommender-api.azurewebsites.net/predict', { "id": id })
+            const res = await axios.post(url, { "id": id })
             var a = res.data.prediction;
             console.log(a);
             a = a.replace(/'/g, '"');
@@ -87,7 +89,7 @@ function DisplayPage() {
       
         const fetchMovies = () =>{
             predData.forEach(async (movie_id) => {
-                console.log(movie_id);
+                // console.log(movie_id);
                 
                 const movieUrl = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=8f655507141a5d524fc2024c9f76b6c7&language=en-US`
                 const res = await axios.get(movieUrl)
@@ -123,10 +125,10 @@ function DisplayPage() {
         <>
             <div className='display-outer-container'>
                 <div className="banner-img-container">
-                    <img className='display-banner-img' src={'https://image.tmdb.org/t/p/original' + content.backdrop_path}></img>
+                    <img className='display-banner-img' src={'https://image.tmdb.org/t/p/original' + content.backdrop_path} alt='banner'></img>
                 </div>
                 <div className='display-inner-container'>
-                    <img className='display-poster-img' src={'https://image.tmdb.org/t/p/original' + content.poster_path}></img>
+                    <img className='display-poster-img' src={'https://image.tmdb.org/t/p/original' + content.poster_path} alt='poster'></img>
                     <div className='content-details-container'>
                         <h1>{content.title ? content.title : content.name}</h1>
                         <p>{content.tagline}</p>

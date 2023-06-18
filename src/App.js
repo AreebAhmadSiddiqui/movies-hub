@@ -9,10 +9,10 @@ import DetailsPage from './components/DetailsPage'
 function App() {
   return (
     <BrowserRouter>
-      <div className='app'>
+      <div className='app' basename="/movies-hub">
         <Navbar />
         <Routes>
-          <Route path='/' element={<HomePage/>} exact/>
+          <Route path='/movies-hub' element={<HomePage/>} exact/>
           <Route path='/movie/:id' element={<DetailsPage/>} />
           <Route path='/tv/:id' element={<DetailsPage/>} />
           <Route path='/movies' element={<MoviesPage/>} exact/>
