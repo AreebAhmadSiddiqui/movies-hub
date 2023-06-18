@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/AreebAhmadSiddiqui/movies-hub/static/css/main.b453b092.css",
+    "main.js": "/AreebAhmadSiddiqui/movies-hub/static/js/main.35474004.js",
+    "static/media/slick.svg": "/AreebAhmadSiddiqui/movies-hub/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/AreebAhmadSiddiqui/movies-hub/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/AreebAhmadSiddiqui/movies-hub/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/AreebAhmadSiddiqui/movies-hub/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/AreebAhmadSiddiqui/movies-hub/index.html",
+    "main.b453b092.css.map": "/AreebAhmadSiddiqui/movies-hub/static/css/main.b453b092.css.map",
+    "main.35474004.js.map": "/AreebAhmadSiddiqui/movies-hub/static/js/main.35474004.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b453b092.css",
+    "static/js/main.35474004.js"
+  ]
+}
