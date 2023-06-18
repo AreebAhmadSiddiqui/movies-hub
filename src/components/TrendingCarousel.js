@@ -26,7 +26,7 @@ function TrendingCarousel() {
     const settings = {
         infinite: true,
         speed: 4000,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true

@@ -22,8 +22,9 @@ function DisplayPage() {
 
     const video_url = window.location.pathname.split('/')[1] === 'movie' ? `https://api.themoviedb.org/3/movie/${id}/videos?api_key=8f655507141a5d524fc2024c9f76b6c7&language=en-US` : `https://api.themoviedb.org/3/tv/${id}/videos?api_key=8f655507141a5d524fc2024c9f76b6c7&language=en-US`
 
-    const url = 'http://localhost:5000/predict'
+    // const url = 'http://localhost:5000/predict'
 
+    // const url = 'https://movie-recommender-api.azurewebsites.net/predict'
     useEffect(() => {
 
         const fetchData = async () => {
@@ -45,7 +46,7 @@ function DisplayPage() {
         fetchVideo()
         
         const fetchPredData = async () => {
-            const res = await axios.post(url, { "id": id })
+            const res = await axios.post('/predict', { "id": id })
             var a = res.data.prediction;
             console.log(a);
             a = a.replace(/'/g, '"');
@@ -57,9 +58,6 @@ function DisplayPage() {
 
         setPredMovies([])
     }, [id])
-
-
-
 
     const castCard = cast.map((item) => {
         return (
