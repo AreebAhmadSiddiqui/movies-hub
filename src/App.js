@@ -8,7 +8,7 @@ import TvPage from './components/TvPage'
 import DetailsPage from './components/DetailsPage'
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/movies-hub'>
       <div className='app'>
         <Navbar />
         <Routes>
