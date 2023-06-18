@@ -46,7 +46,7 @@ function DisplayPage() {
         fetchVideo()
         
         const fetchPredData = async () => {
-            const res = await axios.post('/predict', { "id": id })
+            const res = await axios.post('https://movie-recommender-api.azurewebsites.net/predict', { "id": id })
             var a = res.data.prediction;
             console.log(a);
             a = a.replace(/'/g, '"');
