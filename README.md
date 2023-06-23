@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+## Movies Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React App that leverages the power of the `TMDB API` to fetch movie details and provide personalized movie recommendations to the users. The app incorporates a `content-based` Machine Learning model that utilizes concepts like `bag of words` and `cosine similarities` to generate accurate movie suggestions based on user preferences. Additionally, the application implements `sentiment analysis` to analyze the sentiment of movie reviews and provide insights into the overall reception of a particular movie.
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+![1](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/23b2c2d1-0d53-42d5-821b-f6ef766fda41)
 
-### `npm start`
+![2](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/d9031ca7-b19d-4f1a-a885-f1e6ae12cc49)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![3](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/d2cce875-049f-45ba-b1eb-b27af659d1c1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![4](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/2c6f748f-021f-431f-9e44-47148f524b7b)
 
-### `npm test`
+![5](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/f15f6a07-0ed1-4aaa-a9f0-6a2ee353fa7f)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![6](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/3383d315-b13c-43c2-b4e2-39a8ba1fd47d)
 
-### `npm run build`
+![7](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/b8107bff-d01f-4e68-af80-9750ec088eff)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![8](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/8452ca6e-b48d-463c-b471-b8d30d3c359d)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![9](https://github.com/AreebAhmadSiddiqui/movies-hub/assets/87814983/e2eb5795-20fa-4aa9-a3aa-34e41e8084dc)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation and Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Installation:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm install`  
 
-## Learn More
+To Run Test Suite:  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm test`  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To Start Server:
 
-### Code Splitting
+`npm start`  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Visit App:
 
-### Analyzing the Bundle Size
+https://areebahmadsiddiqui.github.io/movies-hub/ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## General Idea
 
-### Making a Progressive Web App
+The Movie Recommendation and Sentiment Analysis React App is developed using React, a JavaScript library known for its efficient component-based architecture and seamless user interface rendering. It leverages the `TMDB API`, a popular source of movie-related data, to retrieve comprehensive details, including plot summaries, cast members, ratings, release dates, and more. The app incorporates a `content-based Machine Learning model` that employs techniques such as `bag of words` and `cosine similarities` to generate accurate and personalized `movie recommendations`. Furthermore, it utilizes `sentiment analysis`, a `Natural Language Processing` technique, to analyze the sentiment polarity of movie reviews, providing insights into the overall reception of a movie.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Current Problems
 
-### Advanced Configuration
+In today's vast and ever-expanding world of movies, it can be challenging for movie enthusiasts to discover new films that align with their preferences. Additionally, understanding the `general sentiment` surrounding a movie can be helpful for making informed viewing choices. With an overwhelming number of movies available, users often face the problem of finding relevant and `personalized recommendations`, as well as gauging the overall sentiment of a movie based on reviews.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Purpose
 
-### Deployment
+The purpose of the Movie Recommendation and Sentiment Analysis React App is to address the aforementioned challenges and provide users with a `comprehensive movie browsing experience`. The app aims to solve the problem of discovering new movies by utilizing a content-based Machine Learning model that considers user preferences and generates accurate and personalized recommendations. By incorporating sentiment analysis, the app also offers users valuable insights into the `sentiment polarity` of movie reviews, aiding in their decision-making process.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technologies Used
 
-### `npm run build` fails to minify
+  - React
+  - HTML
+  - CSS
+  - JavaScript
+  - Flask
+  - Python
+  - Machine Learning
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## For Machine Learning API and Notebooks
+
+  API
+  - https://github.com/AreebAhmadSiddiqui/movie-recommender-api
+  - https://github.com/AreebAhmadSiddiqui/movie-sentiment-prediction-api
+
+  Notebooks
+  - https://github.com/AreebAhmadSiddiqui/Movie-Recommendation-System
+  - https://github.com/AreebAhmadSiddiqui/Sentiment-Analysis
+
+## Features
+
+  - The app fetches comprehensive movie details from the `TMDB API`, including information such as plot summaries, cast members, genres, ratings, release dates, and more. Users can access a wealth of data about each movie, enabling them to make informed decisions before watching.
+  - The app incorporates a content-based Machine Learning model as and `API` to generate personalized movie recommendations. By considering user preferences, the model analyzes movie features, such as genres, cast, and plot keywords, to suggest movies that align with the user's interests. Recommendations are based on techniques like bag of words and cosine similarities, ensuring accurate and relevant suggestions.
+  - The application performs `sentiment analysis` on movie reviews to determine the sentiment polarity of each review. By utilizing `Natural Language Processing` techniques, the app assesses the sentiment as positive, negative, or neutral, providing insights into the overall reception of a particular movie. Users can gain a better understanding of the audience's opinion towards a movie through the sentiment analysis feature.
+  - The application performs sentiment analysis on movie reviews to determine the `sentiment polarity` of each review. By utilizing Natural Language Processing techniques, the app assesses the sentiment as `positive` or `negative` , providing insights into the overall reception of a particular movie. Users can gain a better understanding of the audience's opinion towards a movie through the sentiment analysis feature.
+  - The app integrates with the `TMDB API` to fetch movie data, leveraging the extensive movie database provided by TMDB. This integration enables the app to retrieve up-to-date and accurate information about movies, including details, ratings, reviews, and more.
+
+## Improvements and features to be added
+
+ - User Authentication and Profiles:
+ - Collaborative Filtering:
+ - Expanded Sentiment Analysis:
+ - Advanced Search and Filtering:
+ - Social Sharing and Recommendations:
+ - User Reviews and Engagement:
+ - Responsive Design
