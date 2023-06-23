@@ -374,3 +374,30 @@ input[type='text']{
 .video-container{
   margin-top: 10px;
 }
+
+.reviews-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* border: 1px solid red; */
+  padding: 10px 9%;
+}
+.review-table{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-bottom: 1px solid white;
+  border-radius: 5px;
+}
+.review{
+
+  width: 75%;
+}
+.prediction{
+  
+  font-weight: bold;
+  width: 10%;
+}

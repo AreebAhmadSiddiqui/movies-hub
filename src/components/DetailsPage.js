@@ -15,6 +15,8 @@ function DisplayPage() {
     const [content, setContent] = useState([])
     const [cast, setCast] = useState([])
     const [videoData, setVideoData] = useState([])
+    const [reviewData,setReviewData]=useState([])
+    const [reviewSentimentData,setReviewSentimentData]=useState([])
 
     const content_url = window.location.pathname.split('/')[1] === 'movie' ? `https://api.themoviedb.org/3/movie/${id}?api_key=8f655507141a5d524fc2024c9f76b6c7&language=en-US` : `https://api.themoviedb.org/3/tv/${id}?api_key=8f655507141a5d524fc2024c9f76b6c7&language=en-US`
 
@@ -25,6 +27,12 @@ function DisplayPage() {
     // const url = 'http://localhost:5000/predict'
 
     const url = 'https://movie-recommender-api.azurewebsites.net/predict'
+
+    const sentimentUrl='https://sentiment-analysis-api-areeb.azurewebsites.net/sentiment'
+    // const sentimentUrl='http://127.0.0.1:5000/sentiment'
+
+    const review_url= window.location.pathname.split('/')[1] === 'movie' ? `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=4d9c9de3bdf0d3b6837c49c086e3b190` : `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=4d9c9de3bdf0d3b6837c49c086e3b190`
+
 
 
     useEffect(() => {
@@ -47,6 +55,13 @@ function DisplayPage() {
         }
         fetchVideo()
         
+        const fetchReviews = async () => {
+            const res = await axios.get(review_url)
+            setReviewData(res.data.results)
+        }
+        fetchReviews()
+
+
         const fetchPredData = async () => {
             const res = await axios.post(url, { "id": id })
             var a = res.data.prediction;
@@ -55,12 +70,12 @@ function DisplayPage() {
             a = JSON.parse(a);
             setPredData(a)
         }
-
         fetchPredData()
 
         setPredMovies([])
     }, [id])
 
+    // console.log(reviewData);
     const castCard = cast.map((item) => {
         return (
             <CastCard
@@ -85,6 +100,40 @@ function DisplayPage() {
 
     })
 
+
+    useEffect(() => {
+      
+        const fetchSentiments = () =>{
+            reviewData.forEach(async (item) => {
+                // console.log(movie_id);
+                
+                const res = await axios.post(sentimentUrl,{"review" : item.content})
+
+                // console.log(predMovies);
+                // const newPredMovies = [...predMovies]; // spreading operator which doesn't mutate the array and returns new array
+                // newPredMovies.push(res.data);
+
+                setReviewSentimentData(reviewSentimentData => [...reviewSentimentData,{"review":item.content,"pred":res.data.prediction}])
+            })
+        }
+        fetchSentiments()
+
+        setReviewSentimentData([])
+    }, [reviewData])
+
+    console.log(reviewSentimentData);
+
+    const reviews=reviewSentimentData.map((item)=>{
+        const cleanText=item.review.replace(/([^a-z0-9 ]+)/gi, '');
+        const pred=item.pred===1 ? "Positive" : "Negative"
+        return(
+            <div className='review-table'>
+                <p className='review'>{cleanText.substr(0,500)+"..."}</p>
+                <p className='prediction' style={pred==='Negative' ? {"color" :"red"}:{"color":"green"}}>{pred}</p>
+            </div>
+
+        )
+    })
     useEffect(() => {
       
         const fetchMovies = () =>{
@@ -156,6 +205,11 @@ function DisplayPage() {
                     {recommendedMovieData.splice(0,12)}
                 </div>
             </div>}
+
+            <div className='reviews-container'>           
+                <h2 style={{ 'fontSize': '27px' ,"margin-bottom" : "20px","marginRight":'10px'}}>Reviews</h2>
+                <div className='reviews-inner-container'>{reviews}</div>
+            </div>
         </>
     )
 }
