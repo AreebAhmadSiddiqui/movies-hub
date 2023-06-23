@@ -48,7 +48,7 @@ https://areebahmadsiddiqui.github.io/movies-hub/
 
 The Movie Recommendation and Sentiment Analysis React App is developed using React, a JavaScript library known for its efficient component-based architecture and seamless user interface rendering. It leverages the `TMDB API`, a popular source of movie-related data, to retrieve comprehensive details, including plot summaries, cast members, ratings, release dates, and more. The app incorporates a `content-based Machine Learning model` that employs techniques such as `bag of words` and `cosine similarities` to generate accurate and personalized `movie recommendations`. Furthermore, it utilizes `sentiment analysis`, a `Natural Language Processing` technique, to analyze the sentiment polarity of movie reviews, providing insights into the overall reception of a movie.
 
-## Current Problems
+## Problem Solved
 
 In today's vast and ever-expanding world of movies, it can be challenging for movie enthusiasts to discover new films that align with their preferences. Additionally, understanding the `general sentiment` surrounding a movie can be helpful for making informed viewing choices. With an overwhelming number of movies available, users often face the problem of finding relevant and `personalized recommendations`, as well as gauging the overall sentiment of a movie based on reviews.
 
